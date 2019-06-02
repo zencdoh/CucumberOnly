@@ -29,8 +29,7 @@ public class Hook {
 	@Before("@web")
 	public void setUp()
 	{
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/home/ubuntu/cromedriver");
-
+		
                 System.setProperty("webdriver.chrome.driver", "/home/ubuntu/chromedriver");
             		driver= new ChromeDriver();
         	driver.get("http://www.google.com");
