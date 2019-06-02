@@ -30,7 +30,11 @@ public class Hook {
 	public void setUp()
 	{
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/home/ubuntu/cromedriver");
-		driver= new ChromeDriver();
+
+                System.setProperty("webdriver.chrome.driver", "/home/ubuntu/chromedriver");
+            		driver= new ChromeDriver();
+        	driver.get("http://www.google.com");
+	
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
